@@ -1,0 +1,132 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+const int MAX = 20;
+
+    string tabNom [MAX];
+
+    int tabAge [MAX];
+
+    int i,nb,age,testAge=0,nb2;
+
+    char reponse;
+
+    cout<<" Combien de noms voulez vous ecrire ? : ";
+
+    cin>>nb;
+
+    while (nb<0 || nb>MAX)
+
+    {
+
+        cout<<"erreur";
+
+        cin>>nb;
+
+    }
+
+    for(i=0;i<nb;i++)
+
+    {
+
+        cout<<"nom : ";
+
+        cin>>tabNom[i];
+
+    }
+
+    for(i=0;i<nb;i++)
+
+    {
+
+        cout<<"quel est l'age de "<<tabNom[i]<<" : ";
+
+        cin>>tabAge[i];
+
+    }
+
+    for(i=0;i<nb;i++)
+
+    {
+
+    cout<<tabAge[i]<<endl;
+
+    }
+
+    cout<<"Saisisez un age : ";
+    cin>>age;
+
+    for(i=0;i<nb;i++)
+    {
+    if(age==tabAge[i])
+    {
+        cout<<tabNom[i]<<" a le meme age "<<endl;
+        testAge++;
+    }
+
+    }
+        if (testAge==0)
+    {
+        cout<<"Aucune personne ne correspond a cet age la ";
+    }
+
+    cout<<endl<<endl;
+
+    for(i=0;i<nb;i++)
+    {
+        if(age<tabAge[i])
+        {
+            cout<<tabNom[i]<<" est plus vieux "<<endl;
+        }
+    }
+
+    cout<<endl<<endl;
+
+    cout<<"Voulez vous saisir des nouveaux noms et ages ? : (o) pour OUI et (n) pour NON ";
+    cin>>reponse;
+
+    while (reponse !='o' && reponse!='n')
+    {
+        cout<<"Veuillez repondre (o) pour OUI et (n) pour NON ";
+        cin>>reponse;
+    }
+
+    if (reponse =='n')
+    {
+        return 0;
+    }
+    else
+    {
+        cout<<"Saisir le nombre d'age et nom : ";
+        cin>>nb2;
+
+        while(nb2+nb>20)
+        {
+            cout<<"La limite de nom et d'age est de "<<MAX<<" veuillez ressaisir : ";
+            cin>>nb2;
+        }
+
+    }
+    for(i=0+nb;i<=nb2+1;i++)
+    {
+        cout<<"nom : ";
+        cin>>tabNom[i];
+    }
+    for(i=0+nb;i<=nb2+1;i++)
+    {
+        cout<<"quel est l'age de "<<tabNom[i]<<" : ";
+        cin>>tabAge[i];
+    }
+    for(i=0+nb;i<=nb2+1;i++)
+    {
+        cout<<tabNom[i]<<" "<<tabAge[i]<<endl;
+    }
+
+
+
+
+return 0;
+}
