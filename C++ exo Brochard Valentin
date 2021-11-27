@@ -1,18 +1,13 @@
 #include <iostream>
-
 using namespace std;
-
 int main()
+
 {
 const int MAX = 20;
-
-    string tabNom [MAX];
-
-    int tabAge [MAX];
-
-    int i,nb,age,testAge=0,nb2;
-
-    char reponse;
+string tabNom [MAX];
+int tabAge [MAX];
+int i,nb,age,testAge=0,nb2;
+char reponse;
 
     cout<<" Combien de noms voulez vous ecrire ? : ";
 
