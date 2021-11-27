@@ -105,7 +105,7 @@ char reponse;
         }
 
     }
-    for(i=0+nb;i<=nb2+1;i++)
+    for(i=nb;i<=nb2+1;i++)
     {
         cout<<"nom : ";
         cin>>tabNom[i];
